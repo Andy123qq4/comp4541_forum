@@ -4,9 +4,9 @@ A decentralized anonymous forum for the HKUST community using Ethereum blockchai
 
 ## Live Demo & Deployment
 
-* **Live Demo:** [HKUST Anonymous Forum](https://hkust-anonymous-forum.vercel.app)
+* **Live Demo:** https://andy123qq4.github.io/comp4541_forum/
 * **Blockchain:** Deployed on Sepolia Testnet
-* **Smart Contract Address:** 0x4511277f98BA4282705Da1c250110E24Aa2f88a2
+* **Smart Contract Address:** 0x5538b80d6DC078c6C3E413c5b61ecE43f0A808b5
 
 To interact with the forum, you'll need:
 * A web3 wallet (like MetaMask)
@@ -55,8 +55,6 @@ Learn how to use the HKUST Anonymous Forum with our detailed guides:
     *   **Orange (Contested):** Equal "Real" and "Fake" votes.
 *   **View Posts and Comments:** Browse through discussions and see what your peers are saying.
 
-
-
 ## Testing and Security Considerations
 
 ### Testing Approach
@@ -78,8 +76,17 @@ The project includes unit tests for the smart contract, located in the `forum_da
     ```bash
     cd forum_dapp
     npx hardhat test
+    # which you need to install hardhat first and add a config.js file in the same directory: 
+    # "forum_dapp/hardhat.config.js"
     ```
-    ![](images/2025-05-11-00-02-30.png)
+    <div style="text-align: center;">
+        <img src="images/2025-05-11-00-24-56.png" alt="Hardhat Test Output" style="width: 100%;">
+        <p style="text-align: center;">Hardhat config</p>
+    </div>
+    <div style="text-align: center;">
+        <img src="images/2025-05-11-00-02-30.png" alt="Hardhat Test Output" style="width: 100%;">
+        <p style="text-align: center;">Hardhat Test Output</p>
+    </div>
 
 ---
 
@@ -95,7 +102,6 @@ We took a close look at the smart contract's security, focusing on common vulner
     *   *Initial Content:* When the forum is first set up, it includes some predefined posts and voting data. This is a deliberate choice to help with demonstration and provide an initial state for the forum.
     *   *Post and Tag Lengths:* There are no strict limits on the length of post content or tags within the contract itself. Users are responsible for the gas costs associated with the length of their input, meaning extremely long strings are technically possible but would be costly.
     *   *Use of Timestamps:* The forum uses `block.timestamp` to record when posts and comments are made, which is a standard approach. While miners have a small degree of influence over these timestamps, this isn't considered a critical risk for the forum's intended operation.
-
 
 
 ## Note
