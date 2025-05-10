@@ -18,6 +18,9 @@ function App() {
   // Contract address - replace with your deployed contract address
   const contractAddress = '0x5538b80d6DC078c6C3E413c5b61ecE43f0A808b5' // Replace with actual address after deployment
 
+  // Determine basename for Router from environment variable
+  const publicBasePath = import.meta.env.VITE_PUBLIC_BASE_PATH || "/";
+
   // Handle account changes more robustly
   const handleAccountsChanged = (accounts) => {
     if (accounts.length === 0) {
@@ -119,7 +122,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename={publicBasePath}>
       <div className="app">
         <Navbar 
           account={account} 
