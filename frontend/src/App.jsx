@@ -16,7 +16,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   // Contract address - replace with your deployed contract address
-  const contractAddress = '0x5538b80d6DC078c6C3E413c5b61ecE43f0A808b5' // Replace with actual address after deployment
+  const contractAddress = '0x5538b80d6DC078c6C3E413c5b61ecE43f0A808b5'
 
   // Determine basename for Router from environment variable
   const publicBasePath = import.meta.env.VITE_PUBLIC_BASE_PATH || "/";

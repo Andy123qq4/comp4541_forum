@@ -4,6 +4,9 @@ A decentralized anonymous forum for the HKUST community using Ethereum blockchai
 
 ## Live Demo & Deployment
 
+## GitHub Repository
+
+* **Source Code:** https://github.com/Andy123qq4/comp4541_forum
 * **Live Demo:** https://andy123qq4.github.io/comp4541_forum/
 * **Blockchain:** Deployed on Sepolia Testnet
 * **Smart Contract Address:** 0x5538b80d6DC078c6C3E413c5b61ecE43f0A808b5
